@@ -56,3 +56,16 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+// ...
+import FabWhatsApp from "@/components/FabWhatsApp";
+// ...
+      <body>
+        <CartProvider>
+          <Nav />
+          {children}
+          <Footer />
+          <CartDrawer />
+          <FabWhatsApp />
+        </CartProvider>
+      </body>
+// ...
