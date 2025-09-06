@@ -15,11 +15,10 @@ export default function Hero() {
               Santa Birria: sabor auténtico con propuesta moderna. Menú simple, directo y delicioso.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link href="#menu" className="btn btn-primary">Ver menú</Link>
+              <Link href="/menu" className="btn btn-primary">Ver carta completa</Link>
               <Link href="#contacto" className="btn btn-ghost">Ubicación y horarios</Link>
             </div>
           </div>
-
           <div className="relative h-64 w-full sm:h-80">
             <Image
               src="/hero.jpg"
