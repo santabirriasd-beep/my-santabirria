@@ -16,5 +16,42 @@ export default function Location() {
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
-              referrerPolicy="no-referr
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
 
+          {/* Información y botones */}
+          <div className="card p-6">
+            <p className="text-sm text-neutral-600">Dirección</p>
+            <p className="mt-1 text-lg font-semibold text-carbón">
+              Santa Birria · Santo Domingo de los Tsáchilas, Ecuador
+            </p>
+
+            <p className="mt-4 text-sm text-neutral-600">Horarios</p>
+            <p className="mt-1 text-carbón">Mar-Dom · 12:00–23:00</p>
+
+            <div className="mt-6 flex flex-wrap gap-3">
+              <a
+                href="https://www.google.com/maps/place/Santa+Birria/@-0.2478192,-79.1610251,17z/data=!3m1!4b1!4m6!3m5!1s0x91d5470050d4618d:0x7da2a3bf5f940e0b!8m2!3d-0.2478246!4d-79.1584448!16s%2Fg%2F11yj7tzqkf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary"
+              >
+                Cómo llegar
+              </a>
+
+              <a
+                href="https://wa.me/593984755209"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-ghost"
+              >
+                WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
