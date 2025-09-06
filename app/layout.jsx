@@ -6,14 +6,19 @@ export const metadata = {
 import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import { CartProvider } from "@/components/cart/CartContext";
+import CartDrawer from "@/components/CartDrawer";
 
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
       <body>
-        <Nav />
-        {children}
-        <Footer />
+        <CartProvider>
+          <Nav />
+          {children}
+          <Footer />
+          <CartDrawer />
+        </CartProvider>
       </body>
     </html>
   );
