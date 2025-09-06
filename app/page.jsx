@@ -2,6 +2,7 @@ import Hero from "@/components/Hero";
 import ProductCard from "@/components/ProductCard";
 import menuData from "@/data/menu";
 import Location from "@/components/Location";
+import QRCodes from "@/components/QRCodes";
 
 export default function Page() {
   return (
@@ -32,6 +33,7 @@ export default function Page() {
         </div>
       </section>
       <Location />
+      <QRCodes />
     </main>
   );
 }
