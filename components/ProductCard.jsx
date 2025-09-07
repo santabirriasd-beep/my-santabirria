@@ -3,40 +3,31 @@ import { useCart } from "./cart/CartContext";
 
 export default function ProductCard({ item }) {
   const { addItem } = useCart();
+  const src = item.image || "/placeholder.png";
 
   return (
-    <article className="card p-4">
-      <div className="aspect-[4/3] w-full overflow-hidden rounded-xl2 bg-neutral-100">
+    <div className="rounded-2xl bg-white p-4 shadow-suave">
+      <div className="mb-3 aspect-[4/3] w-full overflow-hidden rounded-xl2 bg-neutral-100">
         <img
-          src={item.image || "/placeholder.png"}
+          src={src}
           alt={item.name}
           className="h-full w-full object-cover"
-          loading="lazy"
+          onError={(e) => {
+            e.currentTarget.onerror = null;
+            e.currentTarget.src = "/placeholder.png";
+          }}
         />
       </div>
-      <div className="mt-4 flex items-start justify-between gap-3">
-        <div>
-          <h3 className="text-lg font-semibold text-carbón">{item.name}</h3>
-          <p className="text-sm text-neutral-600">{item.desc}</p>
-        </div>
-        <span className="whitespace-nowrap rounded-xl2 bg-vino px-3 py-1 text-sm font-bold text-blanco">
-          ${parseFloat(item.price).toFixed(2)}
+      <div className="flex items-start justify-between">
+        <h3 className="text-lg font-semibold text-carbón">{item.name}</h3>
+        <span className="rounded-full bg-vino px-3 py-1 text-sm font-bold text-white">
+          ${Number(item.price).toFixed(2)}
         </span>
       </div>
-      <button
-        className="btn btn-primary mt-4 w-full"
-        onClick={() =>
-          addItem({
-            id: item.id,
-            name: item.name,
-            price: item.price,
-            image: item.image
-          })
-        }
-      >
+      <p className="mt-1 text-neutral-600">{item.desc}</p>
+      <button className="btn btn-primary mt-4 w-full" onClick={() => addItem(item)}>
         Agregar al carrito
       </button>
-    </article>
+    </div>
   );
 }
-
