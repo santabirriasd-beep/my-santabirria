@@ -15,8 +15,9 @@ module.exports = {
         carbón: "#0D0D0D"
       },
       fontFamily: {
-        display: ["ui-sans-serif", "system-ui", "Segoe UI", "Arial"],
-        body: ["ui-sans-serif", "system-ui", "Segoe UI", "Arial"]
+        display: ["var(--font-rye)", "ui-serif", "Georgia"],
+        body: ["var(--font-montserrat)", "ui-sans-serif", "system-ui"],
+        tagline: ["var(--font-open-sans)", "ui-sans-serif", "system-ui"]
       },
       boxShadow: {
         suave: "0 8px 30px rgba(0,0,0,0.15)"
