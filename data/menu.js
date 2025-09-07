@@ -5,7 +5,7 @@ const menuData = {
   name: "Quesabirrias",
   desc: "La estrella de la casa, cuatro tortillas con birria y consomé para dipear.",
   price: 7.99,
-  image: "/platos/quesabirria.jpg" },
+  image: "/platos/ChatGPT Image 6 sept 2025, 11_49_58 p.m..png" },
     {
       id: "En1",
       name: "Enchiladas",
