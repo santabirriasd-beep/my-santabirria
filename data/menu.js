@@ -50,7 +50,7 @@ const menuData = {
       name: "Aguachile Amarillo",
       desc: "Camarón “desnaturalizado” en limón, chile abanero, mango, maracuya y cebolla; para los amantes de lo acido, acompañado de unas tostadas de maiz.",
       price: "6.75",
-      image: "/platos/Cha"},
+      image: "/platos/ChatGPT Image 7 sept 2025, 10_49_13 a.m..png"},
     {
       id: "CbA1",
       name: "Birria Cone",
