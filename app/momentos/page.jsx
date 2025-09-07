@@ -1,8 +1,8 @@
-import CaptureMoment from "@/components/CaptureMoment";
+import Gallery from "@/components/Gallery";
 
 export const metadata = {
-  title: "Captura tu momento | Santa Birria",
-  description: "Toma una foto, aplícale un marco de Santa Birria y compártela."
+  title: "Momentos | Santa Birria",
+  description: "Sube tu foto y dale me gusta a las de la comunidad."
 };
 
 export default function MomentosPage() {
@@ -10,15 +10,15 @@ export default function MomentosPage() {
     <main>
       <section className="bg-crema">
         <div className="container-p py-10">
-          <h1 className="text-3xl font-extrabold text-bordo">Captura tu momento</h1>
+          <h1 className="text-3xl font-extrabold text-bordo">Momentos</h1>
           <p className="mt-2 text-neutral-700">
-            Activa la cámara o sube una foto, elige un marco y comparte tu recuerdo.
+            Sube tu foto y celebra la birria. Los “me gusta” y tus imágenes se guardan en tu dispositivo.
           </p>
         </div>
       </section>
 
       <section className="container-p py-10">
-        <CaptureMoment />
+        <Gallery />
       </section>
     </main>
   );
