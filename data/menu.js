@@ -5,21 +5,28 @@ const menuData = {
       name: "Quesabirrias",
       desc: "Cuatro crujientes quesatacos con consomé.",
       price: "7.99",
-      image: "/platos/tingas.jpg"
+      image: "/platos/quesabirrias.jpg"
     },
     {
-      id: "nb1",
-      name: "Nacho Macho",
-      desc: "Volcán de queso, birria y guacamole.",
+      id: "En1",
+      name: "Enchiladas",
+      desc: "Tortillas rellenas de tu proteina preferida, acompañado de una salsa roja que te dejara con ganas de más.",
       price: "8.90",
-      image: "/placeholder.png"
+      image: "/platos/enchiladas.jpg"
     },
     {
-      id: "pb1",
-      name: "Pizza de Birria",
-      desc: "Tortillas, mezcla de quesos y birria.",
+      id: "AgV1",
+      name: "Aguachile Verde",
+      desc: "Camarón “desnaturalizado” en limón, chile verde, pepino y cebolla; equilibrio perfecto entre acidez y picante, acompañado de unas tostadas de maiz.",
       price: "10.90",
-      image: "/placeholder.png"
+      image: "/platos/aguachile verde.jpg"
+     {
+      id: "Bt1",
+      name: "Burrito Tradicional",
+      desc: "Tortilla de harina grande, birria jugosa, arroz, frijoles, queso derretido, pico de gallo, crema y guacamole; sellado a la plancha..",
+      price: "10.90",
+      image: "/platos/burrito tradicional.jpg"
+      
     }
   ],
   combos: [
