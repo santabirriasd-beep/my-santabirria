@@ -10,9 +10,6 @@ export default function Nav() {
   const { items, toggle } = useCart();
   const count = items.reduce((a, b) => a + b.qty, 0);
 
-  const reservaUrl =
-    "https://wa.me/593984755209?text=Hola!%20Quiero%20reservar%20en%20Santa%20Birria.%0AFecha:%20__%0AHora:%20__%0APersonas:%20__";
-
   return (
     <header className="sticky top-0 z-50 border-b border-neutral-200 bg-blanco/90 backdrop-blur">
       <div className="container-p flex h-16 items-center justify-between">
@@ -24,9 +21,6 @@ export default function Nav() {
         </Link>
 
         <nav className="hidden items-center gap-6 md:flex">
-          <a href={reservaUrl} target="_blank" rel="noopener noreferrer" className="text-carbón hover:text-vino">
-            Reservar
-          </a>
           <Link href="/momentos" className="text-carbón hover:text-vino">Momentos</Link>
           <a href="#historia" className="text-carbón hover:text-vino">Historia</a>
           <a href="#menu" className="text-carbón hover:text-vino">Menú</a>
@@ -70,9 +64,6 @@ export default function Nav() {
       {open && (
         <div className="md:hidden border-t border-neutral-200 bg-blanco">
           <div className="container-p flex flex-col py-3">
-            <a href={reservaUrl} target="_blank" rel="noopener noreferrer" className="py-2" onClick={() => setOpen(false)}>
-              Reservar
-            </a>
             <Link href="/momentos" className="py-2" onClick={() => setOpen(false)}>Momentos</Link>
             <a href="#historia" className="py-2" onClick={() => setOpen(false)}>Historia</a>
             <a href="#menu" className="py-2" onClick={() => setOpen(false)}>Menú</a>
