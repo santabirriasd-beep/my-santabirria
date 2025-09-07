@@ -3,6 +3,7 @@ import ProductCard from "@/components/ProductCard";
 import menuData from "@/data/menu";
 import Location from "@/components/Location";
 import QRCodes from "@/components/QRCodes";
+import About from "@/components/About";
 
 export default function Page() {
   return (
@@ -36,6 +37,7 @@ export default function Page() {
         </div>
       </section>
 
+      <About />
       <Location />
       <QRCodes />
     </main>
