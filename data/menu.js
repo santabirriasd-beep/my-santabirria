@@ -43,7 +43,7 @@ const menuData = {
       id: "AgR1",
       name: "Aguachile Rojo",
       desc: "Camarón “desnaturalizado” en limón, chile rojo y cebolla; para los amantes de lo intenso, muy picante, acompañado de unas tostadas de maiz.",
-      price: "6.75",
+      price: "6.99",
       image: "/platos/ChatGPT Image 7 sept 2025, 09_59_40 a.m..png"},
     {
       id: "AgA1",
@@ -55,7 +55,7 @@ const menuData = {
       id: "CbA1",
       name: "Birria Cone",
       desc: "Tortilla de trigo dorada y crujiente en forma de cono, rellena con jugosa birria deshebrada, queso fundido y coronada con guacamole fresco. Una creación street food con el sello único de Santa Birria..",
-      price: "6.75",
+      price: "7.50",
       image: "/platos/ChatGPT Image 7 sept 2025, 10_31_50 a.m..png"},
   ],
   combos: [
