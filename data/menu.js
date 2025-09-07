@@ -17,28 +17,46 @@ const menuData = {
       id: "AgV1",
       name: "Aguachile Verde",
       desc: "Camarón “desnaturalizado” en limón, chile verde, pepino y cebolla; equilibrio perfecto entre acidez y picante, acompañado de unas tostadas de maiz.",
-      price: "6,99",
+      price: "6.75",
       image: "/platos/aguachile verde.jpg"},
      {
       id: "Bt1",
       name: "Burrito Tradicional",
       desc: "Tortilla de harina grande, birria jugosa, arroz, frijoles, queso derretido, pico de gallo, crema y guacamole; sellado a la plancha.",
-      price: "8,50",
+      price: "8.50",
       image: "/platos/burrito tradicional.jpg"
       
     },
     {
       id: "Tst1",
       name: "Tostada de Tinga",
-      desc: "crujientes tortillas de maíz cubierta con pollo deshebrado en salsa de jitomate, frijoles refritos y cebolla, coronada con crema, lechuga fresca, queso rallado y aguacate.",
-      price: "3,99",
+      desc: "Crujientes tortillas de maíz cubierta con pollo deshebrado en salsa de jitomate, frijoles refritos y cebolla, coronada con crema, lechuga fresca, queso rallado y aguacate.",
+      price: "3.99",
       image: "/platos/tingas.jpg" },
     {
       id: "EnZu1",
       name: "Enchiladas Suizas",
-      desc: "tortillas de maíz rellenas de pollo deshebrado,papa,carne, bañadas en una cremosa salsa verde con un toque de crema y gratinadas con queso fundido, servidas con guarniciones frescas.",
+      desc: "Tortillas de maíz rellenas de pollo deshebrado,papa,carne, bañadas en una cremosa salsa verde con un toque de crema y gratinadas con queso fundido, servidas con guarniciones frescas.",
       price: "10.90",
       image: "/platos/enchiladas suizas.jpg" },
+     {
+      id: "AgR1",
+      name: "Aguachile Rojo",
+      desc: "Camarón “desnaturalizado” en limón, chile rojo y cebolla; para los amantes de lo intenso, muy picante, acompañado de unas tostadas de maiz.",
+      price: "6.75",
+      image: "/platos/ChatGPT Image 7 sept 2025, 09_59_40 a.m..png"},
+    {
+      id: "AgA1",
+      name: "Aguachile Amarillo",
+      desc: "Camarón “desnaturalizado” en limón, chile abanero, mango, maracuya y cebolla; para los amantes de lo acido, acompañado de unas tostadas de maiz.",
+      price: "6.75",
+      image: "/platos/ChatGPT Image 7 sept 2025, 09_59_40 a.m..png"},
+    {
+      id: "CbA1",
+      name: "Birria Cone",
+      desc: "Tortilla de trigo dorada y crujiente en forma de cono, rellena con jugosa birria deshebrada, queso fundido y coronada con guacamole fresco. Una creación street food con el sello único de Santa Birria..",
+      price: "6.75",
+      image: "/platos/ChatGPT Image 7 sept 2025, 10_31_50 a.m..png"},
   ],
   combos: [
     {
