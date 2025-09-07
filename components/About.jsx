@@ -8,32 +8,25 @@ export default function About() {
           <article className="card p-6">
             <p className="text-neutral-700">
               Santa Birria nace de una receta familiar y muchas horas de cocción lenta.
-              Empezamos con la idea de respetar el sabor tradicional de la birria y
-              llevarlo a un formato moderno, simple y directo para todo público.
-            </p>
-            <p className="mt-3 text-neutral-700">
-              Aquí la birria es sagrada: cuidamos el consomé, los cortes y cada tortilla.
-              Nuestro equipo vive la hospitalidad mexicana con un servicio cálido y cercano.
+              Respetamos el sabor tradicional y lo llevamos a un formato moderno, simple y directo.
             </p>
           </article>
 
           <div className="grid gap-6">
             <article className="card p-6">
               <h3 className="text-lg font-bold text-bordo">Misión</h3>
-              <ul className="mt-2 list-disc space-y-1 pl-5 text-neutral-700">
-                <li>Honrar la birria con ingredientes frescos y técnicas auténticas.</li>
-                <li>Ofrecer una experiencia sencilla, elegante y muy sabrosa.</li>
-                <li>Servir con calidez y respeto a nuestra comunidad.</li>
-              </ul>
+              <p className="mt-2 text-neutral-700">
+                Ofrecer una experiencia auténtica con la birria como eje, uniendo tradición mexicana,
+                innovación y servicio cálido para conectar a nivel sensorial y cultural.
+              </p>
             </article>
 
             <article className="card p-6">
               <h3 className="text-lg font-bold text-bordo">Visión</h3>
-              <ul className="mt-2 list-disc space-y-1 pl-5 text-neutral-700">
-                <li>Ser referente de birria creativa en Ecuador.</li>
-                <li>Crecimiento sostenible sin perder la esencia casera.</li>
-                <li>Convertir cada visita en un antojo de regreso.</li>
-              </ul>
+              <p className="mt-2 text-neutral-700">
+                Ser referente nacional de gastronomía mexicana urbana y crecer de forma sostenible,
+                manteniendo identidad sólida, calidad constante y coherencia en cada punto de venta.
+              </p>
             </article>
           </div>
         </div>
