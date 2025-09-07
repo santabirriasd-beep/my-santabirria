@@ -22,6 +22,7 @@ export default function Nav() {
 
         <nav className="hidden items-center gap-6 md:flex">
           <Link href="/menu" className="text-carbón hover:text-vino">Carta</Link>
+          <a href="#historia" className="text-carbón hover:text-vino">Historia</a>
           <a href="#menu" className="text-carbón hover:text-vino">Menú</a>
           <a href="#combos" className="text-carbón hover:text-vino">Combos</a>
           <a href="#ubicacion" className="text-carbón hover:text-vino">Ubicación</a>
@@ -64,6 +65,7 @@ export default function Nav() {
         <div className="md:hidden border-t border-neutral-200 bg-blanco">
           <div className="container-p flex flex-col py-3">
             <Link href="/menu" className="py-2" onClick={() => setOpen(false)}>Carta</Link>
+            <a href="#historia" className="py-2" onClick={() => setOpen(false)}>Historia</a>
             <a href="#menu" className="py-2" onClick={() => setOpen(false)}>Menú</a>
             <a href="#combos" className="py-2" onClick={() => setOpen(false)}>Combos</a>
             <a href="#ubicacion" className="py-2" onClick={() => setOpen(false)}>Ubicación</a>
