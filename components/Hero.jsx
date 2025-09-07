@@ -7,16 +7,15 @@ export default function Hero() {
       <div className="container-p py-16 sm:py-24">
         <div className="grid items-center gap-8 md:grid-cols-2">
           <div>
-            <h1 className="font-display text-4xl font-extrabold leading-tight text-blanco sm:text-5xl">
-              Cocina mexicana creativa,
-              <br />elegante y dinámica
+            <h1 className="font-display uppercase tracking-wide text-5xl font-extrabold leading-tight text-blanco sm:text-6xl">
+              SANTABIRRIA
             </h1>
-            <p className="mt-4 max-w-prose text-crema/90">
-              Santa Birria: sabor auténtico con propuesta moderna. Menú simple, directo y delicioso.
+            <p className="mt-4 max-w-prose text-crema/90 font-tagline italic">
+              Aquí la birria es sagrada; el hambre es pecado.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link href="/menu" className="btn btn-primary">Ver carta completa</Link>
-              <Link href="#contacto" className="btn btn-ghost">Ubicación y horarios</Link>
+              <Link href="#ubicacion" className="btn btn-ghost">Ubicación y horarios</Link>
             </div>
           </div>
           <div className="relative h-64 w-full sm:h-80">
