@@ -37,7 +37,7 @@ const menuData = {
       id: "EnZu1",
       name: "Enchiladas Suizas",
       desc: "Tortillas de maíz rellenas de pollo deshebrado,papa,carne, bañadas en una cremosa salsa verde con un toque de crema y gratinadas con queso fundido, servidas con guarniciones frescas.",
-      price: "10.90",
+      price: "8.99",
       image: "/platos/enchiladas suizas.jpg" },
      {
       id: "AgR1",
@@ -50,7 +50,7 @@ const menuData = {
       name: "Aguachile Amarillo",
       desc: "Camarón “desnaturalizado” en limón, chile abanero, mango, maracuya y cebolla; para los amantes de lo acido, acompañado de unas tostadas de maiz.",
       price: "6.75",
-      image: "/platos/ChatGPT Image 7 sept 2025, 09_59_40 a.m..png"},
+      image: "/platos/Cha"},
     {
       id: "CbA1",
       name: "Birria Cone",
