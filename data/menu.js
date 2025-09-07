@@ -1,12 +1,11 @@
 const menuData = {
   destacados: [
     {
-      id: "qs1",
+      id: "Qs1",
       name: "Quesabirrias",
       desc: "La estrella de la casa, mexico en el paladar, cuatro tortillas llenas de sabor y consome para dipear.",
       price: "7.99",
-      image: "/platos/star.jpg"
-    },
+      image: "/platos/birria.jpg" },
     {
       id: "En1",
       name: "Enchiladas",
