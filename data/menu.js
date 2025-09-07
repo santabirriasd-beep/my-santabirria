@@ -2,9 +2,9 @@ const menuData = {
   destacados: [
     {
       id: "qs1",
-      name: "Quesatacos de Birria",
-      desc: "Tres quesatacos con consomé.",
-      price: "7.50",
+      name: "Quesabirrias",
+      desc: "Cuatro crujientes quesatacos con consomé.",
+      price: "7.99",
       image: "/placeholder.png"
     },
     {
