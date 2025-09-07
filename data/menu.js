@@ -5,7 +5,7 @@ const menuData = {
       name: "Quesabirrias",
       desc: "Cuatro crujientes quesatacos con consomé.",
       price: "7.99",
-      image: "/placeholder.png"
+      image: "/platos/tingas.jpg"
     },
     {
       id: "nb1",
