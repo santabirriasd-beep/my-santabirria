@@ -1,9 +1,9 @@
 "use client";
 import Link from "next/link";
-import Image from "next/image";
 import { Menu, ShoppingCart } from "lucide-react";
 import { useState } from "react";
 import { useCart } from "./cart/CartContext";
+import BrandLogo from "./BrandLogo";
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
@@ -14,7 +14,9 @@ export default function Nav() {
     <header className="sticky top-0 z-50 border-b border-neutral-200 bg-blanco/90 backdrop-blur">
       <div className="container-p flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-3">
-          <Image src="/logo.svg" alt="Santa Birria" width={36} height={36} />
+          <span className="transition-transform hover:-rotate-6 hover:scale-105">
+            <BrandLogo size={36} />
+          </span>
           <span className="font-display text-xl font-bold text-vino">Santa Birria</span>
         </Link>
 
