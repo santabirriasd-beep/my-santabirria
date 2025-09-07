@@ -3,13 +3,13 @@ const menuData = {
     {
        id: "quesabirrias",
   name: "Quesabirrias",
-  desc: "La estrella de la casa, cuatro tortillas con birria y consomé para dipear.",
+  desc: "La estrella de la casa, cuatro tortillas bañadas en la grasa de la birria, su porcion de proteina y consomé para dipear.",
   price: 7.99,
   image: "/platos/ChatGPT Image 6 sept 2025, 11_49_58 p.m..png" },
     {
       id: "En1",
       name: "Enchiladas",
-      desc: "Tortillas rellenas de tu proteina preferida (carne,pollo o papa) acompañado de una salsa roja que te dejara con ganas de más.",
+      desc: "Tortillas rellenas de tu proteina preferida, queso rallado,salsa agria,aguacate y lechuga acompañada de una salsa roja que te dejara con ganas de más.",
       price: "8.90",
       image: "/platos/enchiladas.jpg"
     },
@@ -54,9 +54,21 @@ const menuData = {
     {
       id: "CbA1",
       name: "Birria Cone",
-      desc: "Tortilla de trigo dorada y crujiente en forma de cono, rellena con jugosa birria deshebrada, queso fundido y coronada con guacamole fresco. Una creación street food con el sello único de Santa Birria..",
+      desc: "Tortilla de trigo dorada y crujiente en forma de cono, rellena de frijoles refritos, crema agria y birria deshebrada, queso fundido y coronada con guacamole fresco. Una creación street food con el sello único de Santa Birria..",
       price: "7.50",
       image: "/platos/ChatGPT Image 7 sept 2025, 10_31_50 a.m..png"},
+     {
+      id: "Fls1",
+      name: "Flautas",
+      desc: "Que se arme la orquesta!! Tres deliciosas flautas crocantes rellenas de pollo,papa y carne punsada, acompañada la convinacion que necesitabas pero no sabias.",
+      price: "7.50",
+      image: "/platos/ChatGPT Image 7 sept 2025, 04_22_03 p.m..png"},
+      {
+      id: "CbA1",
+      name: "Chili Cone",
+      desc: "Un clásico mexicano lleno de sabor, chili de res bien sazonado con frijoles, servido junto a totopos artesanales para disfrutar su crocancia en cada bocado. .",
+      price: "7.50",
+      image: "/platos/ChatGPT Image 7 sept 2025, 04_43_40 p.m..png"},
   ],
   combos: [
     {
