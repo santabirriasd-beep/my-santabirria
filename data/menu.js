@@ -3,9 +3,9 @@ const menuData = {
     {
       id: "qs1",
       name: "Quesabirrias",
-      desc: "Cuatro crujientes quesatacos con consomé.",
+      desc: "La estrella de la casa, mexico en el paladar, cuatro tortillas llenas de sabor y consome para dipear.",
       price: "7.99",
-      image: "/platos/quesabirrias.jpg"
+      image: "/platos/star.jpg"
     },
     {
       id: "En1",
@@ -18,21 +18,21 @@ const menuData = {
       id: "AgV1",
       name: "Aguachile Verde",
       desc: "Camarón “desnaturalizado” en limón, chile verde, pepino y cebolla; equilibrio perfecto entre acidez y picante, acompañado de unas tostadas de maiz.",
-      price: "10.90",
+      price: "6,99",
       image: "/platos/aguachile verde.jpg"},
      {
       id: "Bt1",
       name: "Burrito Tradicional",
       desc: "Tortilla de harina grande, birria jugosa, arroz, frijoles, queso derretido, pico de gallo, crema y guacamole; sellado a la plancha.",
-      price: "10.90",
+      price: "8,50",
       image: "/platos/burrito tradicional.jpg"
       
     },
     {
       id: "Tst1",
       name: "Tostada de Tinga",
-      desc: "crujiente tortilla de maíz cubierta con pollo deshebrado en salsa de jitomate, frijoles refritos y cebolla, coronada con crema, lechuga fresca, queso rallado y aguacate.",
-      price: "10.90",
+      desc: "crujientes tortillas de maíz cubierta con pollo deshebrado en salsa de jitomate, frijoles refritos y cebolla, coronada con crema, lechuga fresca, queso rallado y aguacate.",
+      price: "3,99",
       image: "/platos/tingas.jpg" },
     {
       id: "EnZu1",
