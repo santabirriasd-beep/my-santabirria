@@ -19,7 +19,7 @@ const menuData = {
       name: "Aguachile Verde",
       desc: "Camarón “desnaturalizado” en limón, chile verde, pepino y cebolla; equilibrio perfecto entre acidez y picante, acompañado de unas tostadas de maiz.",
       price: "10.90",
-      image: "/platos/aguachile verde.jpg"
+      image: "/platos/aguachile verde.jpg"},
      {
       id: "Bt1",
       name: "Burrito Tradicional",
@@ -27,7 +27,7 @@ const menuData = {
       price: "10.90",
       image: "/platos/burrito tradicional.jpg"
       
-    }
+    },
   ],
   combos: [
     {
