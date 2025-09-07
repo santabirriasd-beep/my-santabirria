@@ -10,7 +10,7 @@ const menuData = {
     {
       id: "En1",
       name: "Enchiladas",
-      desc: "Tortillas rellenas de tu proteina preferida, acompañado de una salsa roja que te dejara con ganas de más.",
+      desc: "Tortillas rellenas de tu proteina preferida (carne,pollo o papa) acompañado de una salsa roja que te dejara con ganas de más.",
       price: "8.90",
       image: "/platos/enchiladas.jpg"
     },
@@ -23,11 +23,23 @@ const menuData = {
      {
       id: "Bt1",
       name: "Burrito Tradicional",
-      desc: "Tortilla de harina grande, birria jugosa, arroz, frijoles, queso derretido, pico de gallo, crema y guacamole; sellado a la plancha..",
+      desc: "Tortilla de harina grande, birria jugosa, arroz, frijoles, queso derretido, pico de gallo, crema y guacamole; sellado a la plancha.",
       price: "10.90",
       image: "/platos/burrito tradicional.jpg"
       
     },
+    {
+      id: "Tst1",
+      name: "Tostada de Tinga",
+      desc: "crujiente tortilla de maíz cubierta con pollo deshebrado en salsa de jitomate, frijoles refritos y cebolla, coronada con crema, lechuga fresca, queso rallado y aguacate.",
+      price: "10.90",
+      image: "/platos/tingas.jpg" },
+    {
+      id: "EnZu1",
+      name: "Enchiladas Suizas",
+      desc: "tortillas de maíz rellenas de pollo deshebrado,papa,carne, bañadas en una cremosa salsa verde con un toque de crema y gratinadas con queso fundido, servidas con guarniciones frescas.",
+      price: "10.90",
+      image: "/platos/enchiladas suizas.jpg" },
   ],
   combos: [
     {
