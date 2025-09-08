@@ -13,12 +13,13 @@ const menuData = {
       price: "8.90",
       image: "/platos/enchiladas.jpg"
     },
-    {
-      id: "AgV1",
-      name: "Aguachile Verde",
-      desc: "Camarón “desnaturalizado” en limón, chile verde, pepino y cebolla; equilibrio perfecto entre acidez y picante, acompañado de unas tostadas de maiz.",
-      price: "6.75",
-      image: "/platos/aguachile verde.jpg"},
+     {
+      id: "EnZu1",
+      name: "Enchiladas Suizas",
+      desc: "Tortillas de maíz rellenas de pollo deshebrado,papa,carne, bañadas en una cremosa salsa verde con un toque de crema y gratinadas con queso fundido, servidas con guarniciones frescas.",
+      price: "8.99",
+      image: "/platos/enchiladas suizas.jpg" },
+  
      {
       id: "Bt1",
       name: "Burrito Tradicional",
@@ -33,12 +34,12 @@ const menuData = {
       desc: "Crujientes tortillas de maíz cubierta con pollo deshebrado en salsa de jitomate, frijoles refritos y cebolla, coronada con crema, lechuga fresca, queso rallado y aguacate.",
       price: "3.99",
       image: "/platos/tingas.jpg" },
-    {
-      id: "EnZu1",
-      name: "Enchiladas Suizas",
-      desc: "Tortillas de maíz rellenas de pollo deshebrado,papa,carne, bañadas en una cremosa salsa verde con un toque de crema y gratinadas con queso fundido, servidas con guarniciones frescas.",
-      price: "8.99",
-      image: "/platos/enchiladas suizas.jpg" },
+     {
+      id: "AgV1",
+      name: "Aguachile Verde",
+      desc: "Camarón “desnaturalizado” en limón, chile verde, pepino y cebolla; equilibrio perfecto entre acidez y picante, acompañado de unas tostadas de maiz.",
+      price: "6.75",
+      image: "/platos/aguachile verde.jpg"},
      {
       id: "AgR1",
       name: "Aguachile Rojo",
@@ -57,37 +58,38 @@ const menuData = {
       desc: "Tortilla de trigo dorada y crujiente en forma de cono, rellena de frijoles refritos, crema agria y birria deshebrada, queso fundido y coronada con guacamole fresco. Una creación street food con el sello único de Santa Birria..",
       price: "7.50",
       image: "/platos/ChatGPT Image 7 sept 2025, 10_31_50 a.m..png"},
+    {
+      id: "CbA1",
+      name: "Chili Cone",
+      desc: "Un clásico mexicano lleno de sabor, chili de res bien sazonado con frijoles, servido junto a totopos artesanales para disfrutar su crocancia en cada bocado. .",
+      price: "7.50",
+      image: "/platos/ChatGPT Image 7 sept 2025, 04_43_40 p.m..png"},
      {
       id: "Fls1",
       name: "Flautas",
       desc: "Que se arme la orquesta!! Tres deliciosas flautas crocantes rellenas de pollo,papa y carne punsada, acompañada la convinacion que necesitabas pero no sabias.",
       price: "7.50",
       image: "/platos/ChatGPT Image 7 sept 2025, 04_22_03 p.m..png"},
-      {
-      id: "CbA1",
-      name: "Chili Cone",
-      desc: "Un clásico mexicano lleno de sabor, chili de res bien sazonado con frijoles, servido junto a totopos artesanales para disfrutar su crocancia en cada bocado. .",
-      price: "7.50",
-      image: "/platos/ChatGPT Image 7 sept 2025, 04_43_40 p.m..png"},
+      
   ],
   combos: [
     {
       id: "c1",
-      name: "Combo Quesa + Jamaica",
-      desc: "2 quesatacos + agua de jamaica.",
+      name: "El Pecado Mortal",
+      desc: "3 quesatacos + Agua de jamaica.",
       price: "6.50",
-      image: "/placeholder.png"
+      image: "/platos/ChatGPT Image 7 sept 2025, 07_46_55 p.m..png"
     },
     {
       id: "c2",
-      name: "Combo Burrito + Horchata",
+      name: "El Forastero",
       desc: "Burrito clásico + horchata.",
       price: "7.90",
-      image: "/placeholder.png"
+      image: "/platos/ChatGPT Image 7 sept 2025, 08_07_49 p.m..png"
     },
     {
       id: "c3",
-      name: "Combo Enchiladas",
+      name: "Tres Plomasos",
       desc: "Enchiladas rojas + bebida.",
       price: "8.50",
       image: "/placeholder.png"
