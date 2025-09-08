@@ -4,16 +4,30 @@ import { useCart } from "./cart/CartContext";
 export default function CartDrawer() {
   const {
     items, removeItem, inc, dec, clear, total,
-    open, closeCart, orderText, whatsappCheckoutUrl, whatsappSchemeUrl
+    open, closeCart, orderText, whatsappApiUrl, whatsappSchemeUrl
   } = useCart();
 
   const isMobile =
     typeof navigator !== "undefined" && /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-  const waLink = isMobile ? whatsappSchemeUrl : whatsappCheckoutUrl;
+
+  // Preferimos API URL; en móviles intentamos primero el esquema y caemos a API
+  const handleWhatsApp = (e) => {
+    e.preventDefault();
+    if (isMobile) {
+      try {
+        window.location.href = whatsappSchemeUrl;
+        setTimeout(() => window.open(whatsappApiUrl, "_blank"), 600);
+      } catch {
+        window.open(whatsappApiUrl, "_blank");
+      }
+    } else {
+      window.open(whatsappApiUrl, "_blank");
+    }
+  };
 
   return (
     <aside
-      className={`fixed inset-0 z-50 ${open ? "" : "pointer-events-none"} `}
+      className={`fixed inset-0 z-50 ${open ? "" : "pointer-events-none"}`}
       aria-hidden={!open}
     >
       <div
@@ -68,9 +82,8 @@ export default function CartDrawer() {
           </div>
 
           <a
-            href={waLink}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={whatsappApiUrl}
+            onClick={handleWhatsApp}
             className={`btn btn-primary w-full ${items.length === 0 ? "pointer-events-none opacity-60" : ""}`}
           >
             Enviar por WhatsApp
@@ -98,3 +111,4 @@ export default function CartDrawer() {
     </aside>
   );
 }
+
