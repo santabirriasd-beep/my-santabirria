@@ -15,4 +15,10 @@
   "devDependencies": {
     "tailwindcss": "^3.4.10",
     "postcss": "^8.4.41",
-    "autop
+    "autoprefixer": "^10.4.20"
+  },
+  "engines": {
+    "node": "20.x",
+    "npm": "10.x"
+  }
+}
