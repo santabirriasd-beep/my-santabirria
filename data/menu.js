@@ -103,32 +103,32 @@ const menuData = {
     {
       id: "c4",
       name: "El Forastero",
-      desc: "2 Tingas de Pollo + 2 Tingas de Carne + 2 Tingas de Birria.",
+      desc: "2 Tingas de Pollo + 2 Tingas de Birria.",
       price: 8.5,
-      image: "/placeholder.png"
+      image: "/platos/ChatGPT Image 7 sept 2025, 11_20_57 p.m..png"
     }
   ],
   bebidas: [
     {
       id: "b1",
       name: "Agua de Jamaica",
-      desc: "Refrescante, menos azúcar.",
+      desc: "Refrescante y natural, elaborada con flores de jamaica infusionadas y un toque de dulzura que realza su sabor único.",
       price: 1.5,
-      image: "/placeholder.png"
+      image: "/platos/ChatGPT Image 7 sept 2025, 11_20_57 p.m..png"
     },
     {
       id: "b2",
       name: "Horchata",
-      desc: "Arroz, canela, vainilla.",
+      desc: "Bebida tradicional a base de arroz, canela y leche, cremosa y refrescante, perfecta para acompañar cualquier plato.",
       price: 1.8,
-      image: "/placeholder.png"
+      image: "/platos/ChatGPT Image 7 sept 2025, 11_26_22 p.m..png"
     },
     {
       id: "b3",
-      name: "Limonada Rosada",
-      desc: "Cítrica y ligera.",
+      name: "Gaseosas",
+      desc: "Zzziempre vas por lo seguro? Aquí están las clásicas gaseosas que nunca fallan.",
       price: 1.8,
-      image: "/placeholder.png"
+      image: "/platos/ChatGPT Image 7 sept 2025, 11_27_30 p.m..png"
     }
   ]
 };
