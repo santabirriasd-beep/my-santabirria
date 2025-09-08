@@ -22,11 +22,11 @@ export default function Nav() {
 
         <nav className="hidden items-center gap-6 md:flex">
           <Link href="/momentos" className="text-carbón hover:text-vino">Momentos</Link>
-          <a href="#historia" className="text-carbón hover:text-vino">Historia</a>
-          <a href="#menu" className="text-carbón hover:text-vino">Menú</a>
-          <a href="#combos" className="text-carbón hover:text-vino">Combos</a>
-          <a href="#ubicacion" className="text-carbón hover:text-vino">Ubicación</a>
-          <a href="#contacto" className="text-carbón hover:text-vino">Contacto</a>
+          <Link href="/#historia" className="text-carbón hover:text-vino">Historia</Link>
+          <Link href="/#menu" className="text-carbón hover:text-vino">Menú</Link>
+          <Link href="/#combos" className="text-carbón hover:text-vino">Combos</Link>
+          <Link href="/#ubicacion" className="text-carbón hover:text-vino">Ubicación</Link>
+          <Link href="/#contacto" className="text-carbón hover:text-vino">Contacto</Link>
 
           <button
             aria-label="Carrito"
@@ -65,11 +65,11 @@ export default function Nav() {
         <div className="md:hidden border-t border-neutral-200 bg-blanco">
           <div className="container-p flex flex-col py-3">
             <Link href="/momentos" className="py-2" onClick={() => setOpen(false)}>Momentos</Link>
-            <a href="#historia" className="py-2" onClick={() => setOpen(false)}>Historia</a>
-            <a href="#menu" className="py-2" onClick={() => setOpen(false)}>Menú</a>
-            <a href="#combos" className="py-2" onClick={() => setOpen(false)}>Combos</a>
-            <a href="#ubicacion" className="py-2" onClick={() => setOpen(false)}>Ubicación</a>
-            <a href="#contacto" className="py-2" onClick={() => setOpen(false)}>Contacto</a>
+            <Link href="/#historia" className="py-2" onClick={() => setOpen(false)}>Historia</Link>
+            <Link href="/#menu" className="py-2" onClick={() => setOpen(false)}>Menú</Link>
+            <Link href="/#combos" className="py-2" onClick={() => setOpen(false)}>Combos</Link>
+            <Link href="/#ubicacion" className="py-2" onClick={() => setOpen(false)}>Ubicación</Link>
+            <Link href="/#contacto" className="py-2" onClick={() => setOpen(false)}>Contacto</Link>
           </div>
         </div>
       )}
