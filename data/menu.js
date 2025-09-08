@@ -26,7 +26,6 @@ const menuData = {
       desc: "Tortilla de harina grande, birria jugosa, frijoles, queso derretido, pico de gallo, crema y guacamole; sellado a la plancha para darle ese dorado perfecto.",
       price: "8.50",
       image: "/platos/burrito tradicional.jpg"
-      
     },
     {
       id: "Tst1",
@@ -67,7 +66,7 @@ const menuData = {
      {
       id: "Fls1",
       name: "Flautas",
-      desc: "¡¡Que se arme la orquesta!! Tres deliciosas flautas crocantes rellenas de pollo, papa y carne punzada, se acompaña con lechuga fresca, queso rallado y crema agria, la combinación que necesitabas, pero no sabias.",
+      desc: "¡Que se arme la orquesta!! Tres deliciosas flautas crocantes rellenas de pollo, papa y carne punzada, se acompaña con lechuga fresca, queso rallado y crema agria, la combinación que necesitabas, pero no sabias.",
       price: "7.50",
       image: "/platos/ChatGPT Image 7 sept 2025, 04_22_03 p.m..png"},
       
