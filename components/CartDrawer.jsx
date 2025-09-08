@@ -1,102 +1,100 @@
 "use client";
-import Image from "next/image";
 import { useCart } from "./cart/CartContext";
-import { X, Plus, Minus, Trash2, ShoppingCart } from "lucide-react";
 
 export default function CartDrawer() {
-  const { items, inc, dec, removeItem, clear, total, open, closeCart, whatsappCheckoutUrl } = useCart();
+  const {
+    items, removeItem, inc, dec, clear, total,
+    open, closeCart, orderText, whatsappCheckoutUrl, whatsappSchemeUrl
+  } = useCart();
+
+  const isMobile =
+    typeof navigator !== "undefined" && /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+  const waLink = isMobile ? whatsappSchemeUrl : whatsappCheckoutUrl;
 
   return (
-    <>
-      {/* Overlay */}
-      {open && (
-        <div
-          className="fixed inset-0 z-[90] bg-black/40"
-          onClick={closeCart}
-        />
-      )}
-
-      {/* Drawer */}
-      <aside
-        className={`fixed right-0 top-0 z-[100] h-full w-full max-w-md transform bg-blanco shadow-suave transition-transform ${
+    <aside
+      className={`fixed inset-0 z-50 ${open ? "" : "pointer-events-none"} `}
+      aria-hidden={!open}
+    >
+      <div
+        className={`absolute inset-0 bg-black/40 transition-opacity ${open ? "opacity-100" : "opacity-0"}`}
+        onClick={closeCart}
+      />
+      <div
+        className={`absolute right-0 top-0 h-full w-full max-w-md bg-white shadow-xl transition-transform ${
           open ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="flex items-center justify-between border-b border-neutral-200 p-4">
-          <div className="flex items-center gap-2">
-            <ShoppingCart size={20} className="text-vino" />
-            <h3 className="text-lg font-bold text-bordo">Tu pedido</h3>
-          </div>
-          <button aria-label="Cerrar" onClick={closeCart}>
-            <X />
-          </button>
-        </div>
+        <header className="flex items-center justify-between border-b p-4">
+          <h3 className="text-xl font-bold text-bordo">Tu pedido</h3>
+          <button onClick={closeCart} className="text-neutral-600">Cerrar</button>
+        </header>
 
-        <div className="flex h-[calc(100%-168px)] flex-col overflow-y-auto p-4">
+        <div className="flex h-[calc(100%-200px)] flex-col overflow-y-auto p-4">
           {items.length === 0 ? (
-            <p className="text-neutral-600">Tu carrito está vacío.</p>
+            <p className="text-neutral-600">Aún no has agregado productos.</p>
           ) : (
-            <ul className="space-y-4">
-              {items.map((it) => (
-                <li key={it.id} className="flex items-center gap-3">
-                  <div className="h-16 w-16 overflow-hidden rounded-xl2 bg-neutral-100">
-                    {/* usa Image si subes a /public; si son URLs externas, deja img */}
-                    <img
-                      src={it.image || "/placeholder.png"}
-                      alt={it.name}
-                      className="h-full w-full object-cover"
-                    />
+            items.map((it) => (
+              <div key={it.id} className="mb-3 flex items-center gap-3 rounded-xl2 border p-3">
+                <img
+                  src={it.image || "/placeholder.png"}
+                  alt={it.name}
+                  className="h-14 w-14 rounded-xl2 object-cover"
+                  onError={(e) => { e.currentTarget.src = "/placeholder.png"; }}
+                />
+                <div className="flex-1">
+                  <div className="flex items-center justify-between">
+                    <h4 className="font-semibold">{it.name}</h4>
+                    <span className="font-bold">${(parseFloat(it.price) * it.qty).toFixed(2)}</span>
                   </div>
-                  <div className="min-w-0 flex-1">
-                    <p className="truncate font-semibold text-carbón">{it.name}</p>
-                    <p className="text-sm text-neutral-600">${parseFloat(it.price).toFixed(2)}</p>
-                    <div className="mt-2 inline-flex items-center gap-2">
-                      <button className="rounded-xl2 border px-2 py-1" onClick={() => dec(it.id)}>
-                        <Minus size={16} />
-                      </button>
-                      <span className="w-6 text-center">{it.qty}</span>
-                      <button className="rounded-xl2 border px-2 py-1" onClick={() => inc(it.id)}>
-                        <Plus size={16} />
-                      </button>
-                    </div>
-                  </div>
-                  <div className="flex flex-col items-end">
-                    <p className="font-semibold text-carbón">
-                      ${(parseFloat(it.price) * it.qty).toFixed(2)}
-                    </p>
-                    <button
-                      className="mt-2 text-sm text-vino hover:opacity-80"
-                      onClick={() => removeItem(it.id)}
-                    >
-                      <Trash2 size={16} />
+                  <div className="mt-2 flex items-center gap-2">
+                    <button className="rounded border px-2" onClick={() => dec(it.id)}>-</button>
+                    <span className="w-6 text-center">{it.qty}</span>
+                    <button className="rounded border px-2" onClick={() => inc(it.id)}>+</button>
+                    <button className="ml-auto text-sm text-vino underline" onClick={() => removeItem(it.id)}>
+                      quitar
                     </button>
                   </div>
-                </li>
-              ))}
-            </ul>
+                </div>
+              </div>
+            ))
           )}
         </div>
 
-        <div className="border-t border-neutral-200 p-4">
+        <footer className="border-t p-4">
           <div className="mb-3 flex items-center justify-between">
-            <span className="text-sm text-neutral-600">Total</span>
-            <span className="text-xl font-extrabold text-bordo">${total.toFixed(2)}</span>
+            <span className="text-neutral-700">Total</span>
+            <strong className="text-lg text-bordo">${total.toFixed(2)}</strong>
           </div>
-          <div className="flex flex-col gap-2">
-            <a
-              href={whatsappCheckoutUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-primary w-full text-center"
-            >
-              Pedir por WhatsApp
-            </a>
-            <button className="btn btn-ghost w-full" onClick={clear}>
-              Vaciar carrito
-            </button>
-          </div>
-        </div>
-      </aside>
-    </>
+
+          <a
+            href={waLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`btn btn-primary w-full ${items.length === 0 ? "pointer-events-none opacity-60" : ""}`}
+          >
+            Enviar por WhatsApp
+          </a>
+
+          <button
+            className="btn btn-ghost mt-2 w-full"
+            onClick={async () => {
+              try {
+                await navigator.clipboard.writeText(orderText);
+                alert("Pedido copiado. Si WhatsApp no abre, pégalo en tu chat.");
+              } catch {
+                alert("Copia no disponible en este navegador.");
+              }
+            }}
+          >
+            Copiar pedido
+          </button>
+
+          <button className="mt-2 w-full text-sm text-neutral-500 underline" onClick={clear}>
+            Vaciar carrito
+          </button>
+        </footer>
+      </div>
+    </aside>
   );
 }
