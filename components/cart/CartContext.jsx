@@ -36,7 +36,9 @@ export function CartProvider({ children }) {
   const inc = (id) => setItems((prev) => prev.map((p) => (p.id === id ? { ...p, qty: p.qty + 1 } : p)));
   const dec = (id) =>
     setItems((prev) =>
-      prev.map((p) => (p.id === id ? { ...p, qty: Math.max(1, p.qty - 1) } : p)).filter((p) => p.qty > 0)
+      prev
+        .map((p) => (p.id === id ? { ...p, qty: Math.max(1, p.qty - 1) } : p))
+        .filter((p) => p.qty > 0)
     );
 
   const clear = () => setItems([]);
@@ -46,18 +48,34 @@ export function CartProvider({ children }) {
   const openCart = () => setOpen(true);
   const closeCart = () => setOpen(false);
 
-  const whatsappCheckoutUrl = useMemo(() => {
-    const phone = "593984755209";
+  // Número con código de país (Ecuador): 593 + 984755209
+  const phone = "593984755209";
+
+  // Texto del pedido (codificable para URL)
+  const orderText = useMemo(() => {
     const lines = items.map(
       (it) => `• ${it.name} x${it.qty} — $${(parseFloat(it.price) * it.qty).toFixed(2)}`
     );
-    const text = ["Hola! Quiero hacer este pedido:", ...lines, `Total: $${total.toFixed(2)}`].join("\n");
-    return `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
+    return ["Hola! Quiero hacer este pedido:", ...lines, `Total: $${total.toFixed(2)}`].join("\n");
   }, [items, total]);
+
+  // Enlaces WhatsApp: web y esquema de app (fallback móvil)
+  const whatsappCheckoutUrl = useMemo(
+    () => `https://wa.me/${phone}?text=${encodeURIComponent(orderText)}`,
+    [orderText, phone]
+  );
+  const whatsappSchemeUrl = useMemo(
+    () => `whatsapp://send?phone=${phone}&text=${encodeURIComponent(orderText)}`,
+    [orderText, phone]
+  );
 
   return (
     <CartContext.Provider
-      value={{ items, addItem, removeItem, inc, dec, clear, total, open, toggle, openCart, closeCart, whatsappCheckoutUrl }}
+      value={{
+        items, addItem, removeItem, inc, dec, clear, total,
+        open, toggle, openCart, closeCart,
+        orderText, whatsappCheckoutUrl, whatsappSchemeUrl
+      }}
     >
       {children}
     </CartContext.Provider>
