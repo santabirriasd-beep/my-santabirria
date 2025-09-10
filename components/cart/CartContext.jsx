@@ -7,6 +7,7 @@ export function CartProvider({ children }) {
   const [items, setItems] = useState([]);
   const [open, setOpen] = useState(false);
 
+  // Cargar / persistir carrito
   useEffect(() => {
     try {
       const raw = localStorage.getItem("sb_cart");
@@ -19,62 +20,71 @@ export function CartProvider({ children }) {
     } catch {}
   }, [items]);
 
+  // Mutaciones
   const addItem = (item) => {
     setItems((prev) => {
-      const idx = prev.findIndex((p) => p.id === item.id);
-      if (idx >= 0) {
+      const i = prev.findIndex((p) => p.id === item.id);
+      if (i >= 0) {
         const copy = [...prev];
-        copy[idx] = { ...copy[idx], qty: copy[idx].qty + 1 };
+        copy[i] = { ...copy[i], qty: copy[i].qty + 1 };
         return copy;
       }
       return [...prev, { ...item, qty: 1 }];
     });
     setOpen(true);
   };
-
-  const removeItem = (id) => setItems((prev) => prev.filter((p) => p.id !== id));
-  const inc = (id) => setItems((prev) => prev.map((p) => (p.id === id ? { ...p, qty: p.qty + 1 } : p)));
+  const inc = (id) => setItems((p) => p.map((x) => (x.id === id ? { ...x, qty: x.qty + 1 } : x)));
   const dec = (id) =>
-    setItems((prev) =>
-      prev
-        .map((p) => (p.id === id ? { ...p, qty: Math.max(1, p.qty - 1) } : p))
-        .filter((p) => p.qty > 0)
-    );
-
+    setItems((p) => p.map((x) => (x.id === id ? { ...x, qty: Math.max(1, x.qty - 1) } : x)));
+  const removeItem = (id) => setItems((p) => p.filter((x) => x.id !== id));
   const clear = () => setItems([]);
-  const total = useMemo(() => items.reduce((acc, it) => acc + parseFloat(it.price) * it.qty, 0), [items]);
 
-  const toggle = () => setOpen((v) => !v);
-  const openCart = () => setOpen(true);
-  const closeCart = () => setOpen(false);
+  const total = useMemo(() => items.reduce((a, it) => a + Number(it.price) * it.qty, 0), [items]);
 
-  // Número con código de país (Ecuador): 593 + 984755209
+  // Nº Ecuador sin + ni espacios
   const phone = "593984755209";
 
-  // Texto del pedido (codificable para URL)
+  // Mensaje que llegará al WhatsApp
   const orderText = useMemo(() => {
+    if (items.length === 0) return "Hola, quiero hacer un pedido.";
     const lines = items.map(
-      (it) => `• ${it.name} x${it.qty} — $${(parseFloat(it.price) * it.qty).toFixed(2)}`
+      (it) => `• ${it.name} x${it.qty} — $${(Number(it.price) * it.qty).toFixed(2)}`
     );
-    return ["Hola! Quiero hacer este pedido:", ...lines, `Total: $${total.toFixed(2)}`].join("\n");
+    return [
+      "La noche pide birria. Este es mi pedido:",
+      ...lines,
+      `Total: $${total.toFixed(2)}`,
+      "¿Tiempo estimado y método de pago?"
+    ].join("\n");
   }, [items, total]);
 
-  // Enlaces WhatsApp: web y esquema de app (fallback móvil)
-  const whatsappCheckoutUrl = useMemo(
-    () => `https://wa.me/${phone}?text=${encodeURIComponent(orderText)}`,
-    [orderText, phone]
+  // Enlaces 100% compatibles (sin JS)
+  const whatsappApiUrl = useMemo(
+    () => `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(orderText)}`,
+    [phone, orderText]
   );
-  const whatsappSchemeUrl = useMemo(
-    () => `whatsapp://send?phone=${phone}&text=${encodeURIComponent(orderText)}`,
-    [orderText, phone]
+  const whatsappShortUrl = useMemo(
+    () => `https://wa.me/${phone}?text=${encodeURIComponent(orderText)}`,
+    [phone, orderText]
   );
 
   return (
     <CartContext.Provider
       value={{
-        items, addItem, removeItem, inc, dec, clear, total,
-        open, toggle, openCart, closeCart,
-        orderText, whatsappCheckoutUrl, whatsappSchemeUrl
+        items,
+        addItem,
+        inc,
+        dec,
+        removeItem,
+        clear,
+        total,
+        open,
+        setOpen,
+        openCart: () => setOpen(true),
+        closeCart: () => setOpen(false),
+        orderText,
+        whatsappApiUrl,
+        whatsappShortUrl
       }}
     >
       {children}
