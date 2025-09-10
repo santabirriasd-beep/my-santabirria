@@ -7,7 +7,6 @@ export function CartProvider({ children }) {
   const [items, setItems] = useState([]);
   const [open, setOpen] = useState(false);
 
-  // Cargar / persistir carrito
   useEffect(() => {
     try {
       const raw = localStorage.getItem("sb_cart");
@@ -20,7 +19,6 @@ export function CartProvider({ children }) {
     } catch {}
   }, [items]);
 
-  // Mutaciones
   const addItem = (item) => {
     setItems((prev) => {
       const i = prev.findIndex((p) => p.id === item.id);
@@ -35,65 +33,4 @@ export function CartProvider({ children }) {
   };
   const inc = (id) => setItems((p) => p.map((x) => (x.id === id ? { ...x, qty: x.qty + 1 } : x)));
   const dec = (id) =>
-    setItems((p) => p.map((x) => (x.id === id ? { ...x, qty: Math.max(1, x.qty - 1) } : x)));
-  const removeItem = (id) => setItems((p) => p.filter((x) => x.id !== id));
-  const clear = () => setItems([]);
-
-  const total = useMemo(() => items.reduce((a, it) => a + Number(it.price) * it.qty, 0), [items]);
-
-  // Nº Ecuador sin + ni espacios
-  const phone = "593984755209";
-
-  // Mensaje que llegará al WhatsApp
-  const orderText = useMemo(() => {
-    if (items.length === 0) return "Hola, quiero hacer un pedido.";
-    const lines = items.map(
-      (it) => `• ${it.name} x${it.qty} — $${(Number(it.price) * it.qty).toFixed(2)}`
-    );
-    return [
-      "La noche pide birria. Este es mi pedido:",
-      ...lines,
-      `Total: $${total.toFixed(2)}`,
-      "¿Tiempo estimado y método de pago?"
-    ].join("\n");
-  }, [items, total]);
-
-  // Enlaces 100% compatibles (sin JS)
-  const whatsappApiUrl = useMemo(
-    () => `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(orderText)}`,
-    [phone, orderText]
-  );
-  const whatsappShortUrl = useMemo(
-    () => `https://wa.me/${phone}?text=${encodeURIComponent(orderText)}`,
-    [phone, orderText]
-  );
-
-  return (
-    <CartContext.Provider
-      value={{
-        items,
-        addItem,
-        inc,
-        dec,
-        removeItem,
-        clear,
-        total,
-        open,
-        setOpen,
-        openCart: () => setOpen(true),
-        closeCart: () => setOpen(false),
-        orderText,
-        whatsappApiUrl,
-        whatsappShortUrl
-      }}
-    >
-      {children}
-    </CartContext.Provider>
-  );
-}
-
-export function useCart() {
-  const ctx = useContext(CartContext);
-  if (!ctx) throw new Error("useCart must be used within CartProvider");
-  return ctx;
-}
+    setItems((p) => p.map((x) => (x.id === id ? { ...x, qty: Math.max(1
