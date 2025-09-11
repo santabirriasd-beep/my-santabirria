@@ -1,3 +1,4 @@
+// components/CartDrawer.jsx
 "use client";
 import { useState } from "react";
 import { useCart } from "./cart/CartContext";
@@ -29,17 +30,15 @@ export default function CartDrawer() {
   };
 
   return (
-    <aside className={`fixed inset-0 ${open ? "" : "pointer-events-none"} z-[80]`}>
+    <aside className={`fixed inset-0 z-[80] ${open ? "pointer-events-auto" : "pointer-events-none"}`}>
       <div
-        className={`absolute inset-0 bg-black/40 transition-opacity ${
-          open ? "opacity-100" : "opacity-0"
-        }`}
+        className={`absolute inset-0 bg-black/40 transition-opacity ${open ? "opacity-100" : "opacity-0"}`}
         onClick={closeCart}
       />
       <div
-        className={`absolute right-0 top-0 h-full w-full max-w-md bg-white shadow-xl transition-transform ${
+        className={`absolute right-0 top-0 h-full w-[92%] max-w-sm bg-white shadow-2xl transition-transform ${
           open ? "translate-x-0" : "translate-x-full"
-        }`}
+        } z-[81] overflow-y-auto`}
         aria-hidden={!open}
       >
         <div className="flex h-full flex-col">
