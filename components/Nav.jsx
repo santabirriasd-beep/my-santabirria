@@ -1,7 +1,7 @@
 // components/Nav.jsx
 "use client";
 import Link from "next/link";
-import { ShoppingCart } from "lucide-react";
+import { ShoppingBag } from "lucide-react";
 import { useCart } from "@/components/cart/CartContext";
 
 export default function Nav() {
@@ -35,7 +35,7 @@ export default function Nav() {
         aria-label="Abrir carrito"
         className="fixed right-4 top-4 z-[60] inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#7a0e14] text-white shadow-lg hover:bg-[#93121a] focus:outline-none focus:ring-2 focus:ring-[#7a0e14] focus:ring-offset-2"
       >
-        <ShoppingCart className="h-5 w-5" />
+        <ShoppingBag className="h-6 w-6" strokeWidth={2.4} />
         {count > 0 && (
           <span className="absolute -bottom-1 -right-1 inline-flex min-w-[20px] items-center justify-center rounded-full bg-white px-1 text-xs font-semibold text-[#7a0e14] shadow">
             {count}
@@ -45,3 +45,4 @@ export default function Nav() {
     </header>
   );
 }
+
