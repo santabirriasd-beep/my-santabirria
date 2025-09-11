@@ -1,46 +1,51 @@
 import Hero from "@/components/Hero";
-import ProductCard from "@/components/ProductCard";
-import menuData from "@/data/menu";
-import Location from "@/components/Location";
-import QRCodes from "@/components/QRCodes";
+import CaptureMoment from "@/components/CaptureMoment";
 import About from "@/components/About";
+import MenuGrid from "@/components/menu/MenuGrid";
+import Location from "@/components/Location";
+import Footer from "@/components/Footer";
 
 export default function Page() {
   return (
     <main>
-      <Hero />
+      {/* Ajuste para que el scroll pare debajo del navbar fijo */}
+      <style dangerouslySetInnerHTML={{__html:`
+        html{scroll-behavior:smooth}
+        section[id]{scroll-margin-top:90px}
+      `}} />
 
-      <section id="menu" className="container-p py-12">
-        <h2 className="mb-6 text-2xl font-bold text-bordo">Menú destacado</h2>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {menuData.destacados.map((item) => (
-            <ProductCard key={item.id} item={item} />
-          ))}
-        </div>
+      <section id="hero">
+        <Hero />
       </section>
 
-      <section id="combos" className="container-p py-12">
-        <h2 className="mb-6 text-2xl font-bold text-bordo">Combos</h2>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {menuData.combos.map((item) => (
-            <ProductCard key={item.id} item={item} />
-          ))}
-        </div>
+      <section id="momentos">
+        <CaptureMoment />
       </section>
 
-      <section className="container-p py-12">
-        <h2 className="mb-6 text-2xl font-bold text-bordo">Bebidas</h2>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {menuData.bebidas.map((item) => (
-            <ProductCard key={item.id} item={item} />
-          ))}
-        </div>
+      <section id="historia">
+        <About />
       </section>
 
-      <About />
-      <Location />
-      <QRCodes />
+      <section id="menu">
+        <MenuGrid />
+      </section>
+
+      {/* Si no tienes un componente de combos separado,
+         dejamos el ancla para que el link no de error. */}
+      <section id="combos">
+        {/* Opcional: aquí podrías renderizar un grid filtrado a combos si lo tienes */}
+      </section>
+
+      <section id="ubicacion">
+        <Location />
+      </section>
+
+      <section id="contacto">
+        <Footer />
+      </section>
+
+      {/* Punto de anclaje para abrir/ir al carrito si lo necesitas */}
+      <div id="carrito" />
     </main>
   );
 }
-
