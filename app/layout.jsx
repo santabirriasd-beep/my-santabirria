@@ -8,7 +8,11 @@ export const metadata = {
   title: "Santa Birria | Cocina mexicana creativa",
   description: "Birria sagrada y menú directo en Ecuador."
 };
-
+icons: {
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
+};
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
