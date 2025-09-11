@@ -1,25 +1,17 @@
-import Gallery from "@/components/Gallery";
+// app/momentos/page.jsx
+"use client";
+import dynamic from "next/dynamic";
 
-export const metadata = {
-  title: "Momentos | Santa Birria",
-  description: "Sube tu foto y dale me gusta a las de la comunidad."
-};
+const CaptureMoment = dynamic(
+  () => import("@/components/CaptureMoment"),
+  { ssr: false }
+);
 
 export default function MomentosPage() {
   return (
-    <main>
-      <section className="bg-crema">
-        <div className="container-p py-10">
-          <h1 className="text-3xl font-extrabold text-bordo">Momentos</h1>
-          <p className="mt-2 text-neutral-700">
-            Sube tu foto y celebra la birria. Los “me gusta” y tus imágenes se guardan en tu dispositivo.
-          </p>
-        </div>
-      </section>
-
-      <section className="container-p py-10">
-        <Gallery />
-      </section>
+    <main className="mx-auto max-w-6xl px-4 py-8">
+      <h1 className="mb-6 text-3xl font-bold text-[#7a0e14]">Momentos</h1>
+      <CaptureMoment />
     </main>
   );
 }
