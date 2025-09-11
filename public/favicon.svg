@@ -1,0 +1,22 @@
+<!-- public/favicon.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <defs>
+    <mask id="cut">
+      <rect width="256" height="256" fill="black"/>
+      <g fill="white">
+        <circle cx="128" cy="108" r="86"/>
+        <rect x="84" y="164" width="88" height="52" rx="14" ry="14"/>
+      </g>
+      <g fill="black">
+        <circle cx="98" cy="116" r="16"/>
+        <circle cx="158" cy="116" r="16"/>
+        <path d="M128 130l-12 20h24z"/>
+        <rect x="108" y="184" width="8" height="16" rx="2"/>
+        <rect x="124" y="184" width="8" height="16" rx="2"/>
+        <rect x="140" y="184" width="8" height="16" rx="2"/>
+      </g>
+    </mask>
+  </defs>
+  <rect width="256" height="256" fill="none"/>
+  <rect width="256" height="256" fill="#7A0E17" mask="url(#cut)"/>
+</svg>
