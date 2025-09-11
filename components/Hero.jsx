@@ -1,45 +1,40 @@
-"use client";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section id="hero" className="bg-gradient-to-r from-[#5e0d13] to-[#7b0f17] text-white">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 lg:py-24 grid lg:grid-cols-2 gap-10 items-center">
-        <div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+    <section className="bg-gradient-to-br from-[#4b070c] via-[#5c0a11] to-[#2b0204] text-white">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 px-4 py-16 md:grid-cols-2 md:py-20">
+        <div className="space-y-6">
+          <h1 className="text-4xl font-extrabold leading-[1.05] tracking-tight md:text-6xl">
             SANTABIRRIA
           </h1>
-          <p className="mt-5 text-lg sm:text-xl text-white/90">
+          <p className="text-base text-[#f6d9d9]/90 md:text-lg">
             Aquí la birria es sagrada; el hambre es pecado.
           </p>
-
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Link
-              href="/#menu"
-              prefetch={false}
-              className="inline-flex items-center rounded-xl bg-white text-vino px-5 py-3 font-semibold shadow hover:shadow-md"
+          <div className="flex gap-3">
+            <a
+              href="#menu"
+              className="rounded-xl bg-[#faf4f4] px-5 py-3 font-semibold text-[#7a0e14] shadow hover:shadow-md"
             >
               Ver carta completa
-            </Link>
-            <Link
-              href="/#ubicacion"
-              prefetch={false}
-              className="inline-flex items-center rounded-xl border border-white/30 px-5 py-3 font-semibold hover:bg-white/10"
+            </a>
+            <a
+              href="#ubicacion"
+              className="rounded-xl bg-white/10 px-5 py-3 font-semibold text-white ring-1 ring-white/20 hover:bg-white/15"
             >
               Ubicación y horarios
-            </Link>
+            </a>
           </div>
         </div>
 
-        <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl shadow-2xl ring-1 ring-white/20">
+        <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl shadow-2xl ring-1 ring-white/10">
           <Image
             src="/hero.jpg"
-            alt="Rótulo de Santa Birria"
+            alt="Santa Birria"
             fill
             priority
             className="object-cover"
-            sizes="(max-width: 1024px) 100vw, 50vw"
           />
         </div>
       </div>
