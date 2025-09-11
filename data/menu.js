@@ -7,61 +7,35 @@ const menuData = {
       price: 7.99,
       image: "/platos/ChatGPT Image 6 sept 2025, 11_49_58 p.m..png"
     },
-    {
-      id: "En1",
-      name: "Enchiladas",
-      desc: "Tortillas rellenas de tu proteína preferida, queso rallado, salsa agria, aguacate y lechuga acompañada de una salsa roja que te dejara con ganas de más.",
-      price: 8.9,
-      image: "/platos/enchiladas.jpg"
-    },
-    {
-      id: "EnZu1",
-      name: "Enchiladas Suizas",
-      desc: "Tortillas de maíz rellenas de tu proteína preferida, bañadas en una cremosa salsa de jitomate con un toque de crema y gratinadas con queso fundido, servidas con guarniciones frescas.",
-      price: 8.99,
-      image: "/platos/enchiladas suizas.jpg"
-    },
-    {
-      id: "Bt1",
-      name: "Burrito Tradicional",
-      desc: "Tortilla de harina grande, birria jugosa, frijoles, queso derretido, pico de gallo, crema y guacamole; sellado a la plancha para darle ese dorado perfecto.",
-      price: 8.5,
-      image: "/platos/burrito tradicional.jpg"
-    },
-    {
-      id: "Tst1",
-      name: "Tostada de Tinga",
-      desc: "Crujientes tortillas de maíz cubierta con pollo deshebrado en salsa de jitomate, frijoles refritos y cebolla en escabeche, coronada con crema agria, lechuga fresca, queso rallado y aguacate.",
-      price: 3.99,
-      image: "/platos/tingas.jpg"
-    },
-    {
-      id: "AgV1",
-      name: "Aguachile Verde",
-      desc: "Camarón “desnaturalizado” en limón, chile jalapeño, pepino y cebolla; equilibrio perfecto entre acidez y picante, acompañado de unas tostadas de maíz.",
-      price: 6.75,
-      image: "/platos/aguachile verde.jpg"
-    },
-    {
-      id: "AgR1",
-      name: "Aguachile Rojo",
-      desc: "Camarón “desnaturalizado” en limón, chile guajillo y cebolla en escabeche; para los amantes de lo intenso, muy picante, acompañado de unas tostadas de maíz.",
-      price: 6.99,
-      image: "/platos/ChatGPT Image 7 sept 2025, 09_59_40 a.m..png"
-    },
-    {
-      id: "AgA1",
-      name: "Aguachile Amarillo",
-      desc: "Camarón “desnaturalizado” en limón, chile habanero, mango, maracuyá y cebolla en escabeche; para los amantes de lo ácido, acompañado de unas tostadas de maíz.",
-      price: 6.75,
-      image: "/platos/ChatGPT Image 7 sept 2025, 10_49_13 a.m..png"
-    },
+    
     {
       id: "CbA1",
       name: "Birria Cone",
       desc: "Tortilla de trigo dorada y crujiente en forma de cono, rellena de frijoles refritos, crema agria y birria deshebrada, queso fundido y coronada con guacamole fresco. Una creación Street Food con el sello único de Santa Birria.",
       price: 7.5,
       image: "/platos/ChatGPT Image 7 sept 2025, 10_31_50 a.m..png"
+    },
+      {
+      id: "Pz1",
+      name: "Pizza Birria",
+      desc: "Tres tortillas de trigo doradas y crujientes, rellenas de un mix de quesos entre Cheddar y Mozarela, birria deshebrada, acompañada con totopos artesanales crujientes, coronada con guacamole fresco, pico de gallo y salsas picantes que completan la fiesta. Una creación Street Food con el sello único de Santa Birria.",
+      price: 7.5,
+      image: "/platos/ChatGPT Image 7 sept 2025, 10_31_50 a.m..png"
+    },
+    {
+      id: "NaM",
+      name: "La Cumbre Azteca",
+      desc: "Un volcán lleno de sabor, en su base encontramos totopos con autentico sabor a maíz, bañado de frijoles negros a la olla, la proteína a su elección, guarniciones de la casa, la preparación corona con un queso fundido que homogeniza todos los ingredientes.",
+      price: 7.99,
+      image: "/platos/ChatGPT Image 6 sept 2025, 11_49_58 p.m..png"
+    },
+    
+      {
+      id: "Tst1",
+      name: "Tostada de Tinga",
+      desc: "Crujientes tortillas de maíz cubierta con pollo deshebrado en salsa de jitomate, frijoles refritos y cebolla en escabeche, coronada con crema agria, lechuga fresca, queso rallado y aguacate.",
+      price: 3.99,
+      image: "/platos/tingas.jpg"
     },
     {
       id: "ChC1",
@@ -70,13 +44,7 @@ const menuData = {
       price: 7.5,
       image: "/platos/ChatGPT Image 7 sept 2025, 04_43_40 p.m..png"
     },
-    {
-      id: "Fls1",
-      name: "Flautas",
-      desc: "¡Que se arme la orquesta!! Tres deliciosas flautas crocantes rellenas de pollo, papa y carne punzada, se acompaña con lechuga fresca, queso rallado y crema agria, la combinación que necesitabas, pero no sabias.",
-      price: 7.5,
-      image: "/platos/ChatGPT Image 7 sept 2025, 04_22_03 p.m..png"
-    }
+  
   ],
   combos: [
     {
@@ -89,21 +57,21 @@ const menuData = {
     {
       id: "c2",
       name: "La Última Cena",
-      desc: "Burrito clásico + Horchata + Caldo de Birria + Flan Napolitano + Guarniciones de la casa",
+      desc: "Mini Pizza Birria+ Horchata + Caldo de Birria + Flan Napolitano + Guarniciones de la casa",
       price: 14.99,
       image: "/platos/ChatGPT Image 7 sept 2025, 08_41_35 p.m..png"
     },
     {
       id: "c3",
       name: "Tres Plomasos",
-      desc: "Enchiladas rojas + bebida + Totopos artesanales + Guarniciones de la casa.",
+      desc: "Conos pequeños rellenos de Birria,Pastor y Pollo + Agua de Jamaica + Totopos artesanales + Guarniciones de la casa.",
       price: 8.5,
       image: "/platos/ChatGPT Image 7 sept 2025, 09_04_38 p.m..png"
     },
     {
       id: "c4",
       name: "El Forastero",
-      desc: "2 Tingas de Pollo + 2 Tingas de Birria.",
+      desc: "2 Tingas de Pollo + 2 Tingas de Birria+ 2 Bebidas+ un Flan Napolitano+ Guarniciones de la casa.",
       price: 8.5,
       image: "/platos/ChatGPT Image 7 sept 2025, 11_20_57 p.m..png"
     }
