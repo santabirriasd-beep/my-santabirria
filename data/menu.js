@@ -39,8 +39,8 @@ const menuData = {
     },
     {
       id: "ChC1",
-      name: "Chili Cone",
-      desc: "Un clásico mexicano lleno de sabor, chili de res bien sazonado con frijoles, servido junto a aguacate y totopos artesanales para disfrutar su crocancia en cada bocado.",
+      name: "El Conazo",
+      desc: "Un clásico mexicano lleno de sabor, Una base de queso fundido con tu proteina eleccion, servido junto a aguacate y totopos artesanales para disfrutar su crocancia en cada bocado.",
       price: 7.5,
       image: "/platos/ChatGPT Image 7 sept 2025, 04_43_40 p.m..png"
     },
