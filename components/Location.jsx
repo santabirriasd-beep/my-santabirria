@@ -28,7 +28,7 @@ export default function Location() {
             </p>
 
             <p className="mt-4 text-sm text-neutral-600">Horarios</p>
-            <p className="mt-1 text-carbón">Mar-Dom · 12:00–23:00</p>
+            <p className="mt-1 text-carbón">Lun-Dom · 16:00–22:00</p>
 
             <div className="mt-6 flex flex-wrap gap-3">
               <a
